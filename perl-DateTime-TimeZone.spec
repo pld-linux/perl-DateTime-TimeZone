@@ -9,7 +9,7 @@ Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl):	DateTime::TimeZone - podstawowe klasy obiektowe do obs³ugi stref czasowych
 Name:		perl-DateTime-TimeZone
 Version:	0.30
-Release:	1
+Release:	2
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic

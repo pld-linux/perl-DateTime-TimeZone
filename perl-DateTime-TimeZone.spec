@@ -10,7 +10,8 @@ Summary(pl):	DateTime::TimeZone - podstawowe klasy obiektowe do obs³ugi stref cz
 Name:		perl-DateTime-TimeZone
 Version:	0.2601
 Release:	1
-License:	(enter GPL/LGPL/BSD/BSD-like/Artistic/other license name here)
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b6d26bdb01a73a805b712ff9dbf9efd1

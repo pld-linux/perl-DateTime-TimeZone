@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DateTime
-%define	pnam	TimeZone
+%define		pdir	DateTime
+%define		pnam	TimeZone
 Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl):	DateTime::TimeZone - podstawowe klasy obiektowe do obs³ugi stref czasowych
 Name:		perl-DateTime-TimeZone

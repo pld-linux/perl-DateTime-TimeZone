@@ -5,7 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DateTime
 %define	pnam	TimeZone
-Summary:	DateTime::TimeZone - Time zone object base class and factory
+Summary:	DateTime::TimeZone - time zone object base class and factory
+Summary(pl):	DateTime::TimeZone - podstawowe klasy obiektowe do obs³ugi stref czasowych
 Name:		perl-DateTime-TimeZone
 Version:	0.2601
 Release:	1
@@ -28,6 +29,15 @@ Note that without the "DateTime.pm" module, this module does not
 do much. It's primary interface is through a "DateTime" object,
 and most users will not need to directly use "DateTime::TimeZone"
 methods.
+
+%description -l pl
+Jest to klasa bazowa dla klas wszystkich obiektów stref czasowych.
+Strefa czasowa jest reprezentowana przez zbiór regu³, z których ka¿da
+okre¶la przesuniêcie o zadany okres czasu w stosunku do czasu
+uniwersalnego (GMT). Nale¿y zwróciæ uwagê, ¿e bez modu³u "DateTime.pm"
+modu³ ten nie jest w stanie wiele zdzia³aæ. Jego podstawowym
+interfejsem jest modu³ "DateTime" i w wiêkszo¶ci przypadków nie ma
+potrzeby bezpo¶redniego korzystania z metod "DateTime::TimeZone".
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

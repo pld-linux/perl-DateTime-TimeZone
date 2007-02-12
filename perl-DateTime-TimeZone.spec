@@ -6,7 +6,7 @@
 %define		pdir	DateTime
 %define		pnam	TimeZone
 Summary:	DateTime::TimeZone - time zone object base class and factory
-Summary(pl):	DateTime::TimeZone - podstawowe klasy obiektowe do obs≥ugi stref czasowych
+Summary(pl.UTF-8):   DateTime::TimeZone - podstawowe klasy obiektowe do obs≈Çugi stref czasowych
 Name:		perl-DateTime-TimeZone
 Version:	0.46
 Release:	1
@@ -39,14 +39,14 @@ do much. It's primary interface is through a "DateTime" object,
 and most users will not need to directly use "DateTime::TimeZone"
 methods.
 
-%description -l pl
-Jest to klasa bazowa dla klas wszystkich obiektÛw stref czasowych.
-Strefa czasowa jest reprezentowana przez zbiÛr regu≥, z ktÛrych kaøda
-okre∂la przesuniÍcie o zadany okres czasu w stosunku do czasu
-uniwersalnego (GMT). Naleøy zwrÛciÊ uwagÍ, øe bez modu≥u "DateTime.pm"
-modu≥ ten nie jest w stanie wiele zdzia≥aÊ. Jego podstawowym
-interfejsem jest modu≥ "DateTime" i w wiÍkszo∂ci przypadkÛw nie ma
-potrzeby bezpo∂redniego korzystania z metod "DateTime::TimeZone".
+%description -l pl.UTF-8
+Jest to klasa bazowa dla klas wszystkich obiekt√≥w stref czasowych.
+Strefa czasowa jest reprezentowana przez zbi√≥r regu≈Ç, z kt√≥rych ka≈ºda
+okre≈õla przesuniƒôcie o zadany okres czasu w stosunku do czasu
+uniwersalnego (GMT). Nale≈ºy zwr√≥ciƒá uwagƒô, ≈ºe bez modu≈Çu "DateTime.pm"
+modu≈Ç ten nie jest w stanie wiele zdzia≈Çaƒá. Jego podstawowym
+interfejsem jest modu≈Ç "DateTime" i w wiƒôkszo≈õci przypadk√≥w nie ma
+potrzeby bezpo≈õredniego korzystania z metod "DateTime::TimeZone".
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

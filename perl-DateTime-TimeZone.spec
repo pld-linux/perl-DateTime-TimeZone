@@ -6,7 +6,7 @@
 %define		pdir	DateTime
 %define		pnam	TimeZone
 Summary:	DateTime::TimeZone - time zone object base class and factory
-Summary(pl.UTF-8):   DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
+Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
 Version:	0.46
 Release:	1

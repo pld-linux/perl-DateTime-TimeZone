@@ -8,14 +8,14 @@
 Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
-Version:	0.46
-Release:	2
+Version:	0.65
+Release:	1
 Epoch:		2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fe52d18c393d3e7841be0aba972e4e43
+# Source0-md5:	c2ead4aa5d617b1170b5cef7db9a61b8
 URL:		http://search.cpan.org/dist/DateTime-TimeZone/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -71,33 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/DateTime/TimeZone*pm
-%dir %{perl_vendorlib}/DateTime/TimeZone
-%{perl_vendorlib}/DateTime/TimeZone/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Africa
-%{perl_vendorlib}/DateTime/TimeZone/Africa/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Indian
-%{perl_vendorlib}/DateTime/TimeZone/Indian/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Pacific
-%{perl_vendorlib}/DateTime/TimeZone/Pacific/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Europe
-%{perl_vendorlib}/DateTime/TimeZone/Europe/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Asia
-%{perl_vendorlib}/DateTime/TimeZone/Asia/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/America
-%{perl_vendorlib}/DateTime/TimeZone/America/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/America/Argentina
-%{perl_vendorlib}/DateTime/TimeZone/America/Argentina/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/America/Indiana
-%{perl_vendorlib}/DateTime/TimeZone/America/Indiana/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/America/Kentucky
-%{perl_vendorlib}/DateTime/TimeZone/America/Kentucky/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/America/North_Dakota
-%{perl_vendorlib}/DateTime/TimeZone/America/North_Dakota/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Australia
-%{perl_vendorlib}/DateTime/TimeZone/Australia/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Atlantic
-%{perl_vendorlib}/DateTime/TimeZone/Atlantic/*.pm
-%dir %{perl_vendorlib}/DateTime/TimeZone/Antarctica
-%{perl_vendorlib}/DateTime/TimeZone/Antarctica/*.pm
+%{perl_vendorlib}/DateTime/*.pm
+%{perl_vendorlib}/DateTime/TimeZone
 %{_mandir}/man3/*

@@ -8,14 +8,14 @@
 Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
-Version:	1.05
+Version:	1.23
 Release:	1
 Epoch:		3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DateTime/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8a6e653ced4cce8d5b54f674327df06c
+# Source0-md5:	2d8eb5be7ac31f58b9d17ee92b845603
 URL:		http://search.cpan.org/dist/DateTime-TimeZone/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -33,13 +33,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	'perl(DateTime::TimeZone.*)'
 
 %description
-This class is the base class for all time zone objects. A time
-zone is represented internally as a set of observances, each
-of which describes the offset from GMT for a given time period.
-Note that without the "DateTime.pm" module, this module does not
-do much. It's primary interface is through a "DateTime" object,
-and most users will not need to directly use "DateTime::TimeZone"
-methods.
+This class is the base class for all time zone objects. A time zone is
+represented internally as a set of observances, each of which
+describes the offset from GMT for a given time period. Note that
+without the "DateTime.pm" module, this module does not do much. It's
+primary interface is through a "DateTime" object, and most users will
+not need to directly use "DateTime::TimeZone" methods.
 
 %description -l pl.UTF-8
 Jest to klasa bazowa dla klas wszystkich obiektów stref czasowych.

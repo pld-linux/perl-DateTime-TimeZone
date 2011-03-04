@@ -10,22 +10,26 @@
 Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
-Version:	1.26
+Version:	1.28
 Release:	0.1
 Epoch:		3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DateTime/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	4a5b5e90044f4a1736c214386d0bc7f8
+Source0:	http://www.cpan.org/modules/by-module/DateTime/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	c5a9c76eac24181f05ceab9b6cf3e4da
 URL:		http://search.cpan.org/dist/DateTime-TimeZone/
-BuildRequires:	perl-Module-Build
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
+BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Class-Load
+BuildRequires:	perl-Class-Singleton >= 1.03
 # most tests skipped without DateTime >= 0.1501
 BuildRequires:	perl-DateTime >= 0.15_01
 BuildRequires:	perl-Params-Validate >= 0.72
+BuildRequires:	perl-Test-Simple >= 0.88
 %endif
 Requires:	perl-Class-Singleton >= 1.03
 Requires:	perl-Params-Validate >= 0.72
@@ -55,16 +59,18 @@ potrzeby bezpośredniego korzystania z metod "DateTime::TimeZone".
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	installdirs=vendor \
-	destdir=$RPM_BUILD_ROOT
-./Build
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 
-%{?with_tests:./Build test}
+%{__make}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-./Build install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,6 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/DateTime/*.pm
+%{perl_vendorlib}/DateTime/TimeZone.pm
 %{perl_vendorlib}/DateTime/TimeZone
-%{_mandir}/man3/*
+%{_mandir}/man3/DateTime::TimeZone*.3pm*

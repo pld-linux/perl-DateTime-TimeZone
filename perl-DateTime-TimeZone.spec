@@ -1,5 +1,3 @@
-# TODO:
-# - Fix so it builds with tests
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
@@ -11,7 +9,7 @@ Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
 Version:	1.28
-Release:	0.1
+Release:	1
 Epoch:		3
 # same as perl
 License:	GPL v1+ or Artistic

@@ -27,6 +27,7 @@ BuildRequires:	perl-Class-Singleton >= 1.03
 # most tests skipped without DateTime >= 0.1501
 BuildRequires:	perl-DateTime >= 0.15_01
 BuildRequires:	perl-Params-Validate >= 0.72
+BuildRequires:	perl-List-AllUtils
 BuildRequires:	perl-Test-Simple >= 0.96
 %endif
 Requires:	perl-Class-Singleton >= 1.03

@@ -8,34 +8,39 @@
 Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
-Version:	2.06
+Version:	2.09
 Release:	1
 Epoch:		3
-# same as perl
+# same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DateTime/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b24832c5dcf43e132e829c1cdc1fa19c
+# Source0-md5:	a7c3c4a68286096e8f158e351c76ef3a
 URL:		http://search.cpan.org/dist/DateTime-TimeZone/
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl(Pod::Man) >= 1.14
-BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-devel >= 1:5.8.4
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Class-Load
+BuildRequires:	perl(Cwd) >= 3
 BuildRequires:	perl-Class-Singleton >= 1.03
 # most tests skipped without DateTime >= 0.1501
 BuildRequires:	perl-DateTime >= 0.15_01
-BuildRequires:	perl-Params-Validate >= 0.72
-BuildRequires:	perl-List-AllUtils
+BuildRequires:	perl-Module-Runtime
+BuildRequires:	perl-Params-ValidationCompiler >= 0.13
+BuildRequires:	perl-Scalar-List-Utils >= 1.33
+BuildRequires:	perl-Specio
+BuildRequires:	perl-Storable
+BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Simple >= 0.96
+BuildRequires:	perl-Test-Requires
+BuildRequires:	perl-Try-Tiny
+BuildRequires:	perl-namespace-autoclean
 %endif
-Requires:	perl-Class-Singleton >= 1.03
-Requires:	perl-Params-Validate >= 0.72
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	'perl(DateTime::TimeZone.*)'
+%define		_noautoreq_perl	DateTime::TimeZone.*
 
 %description
 This class is the base class for all time zone objects. A time zone is

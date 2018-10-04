@@ -8,15 +8,15 @@
 Summary:	DateTime::TimeZone - time zone object base class and factory
 Summary(pl.UTF-8):	DateTime::TimeZone - podstawowe klasy obiektowe do obsługi stref czasowych
 Name:		perl-DateTime-TimeZone
-Version:	2.09
+Version:	2.19
 Release:	1
 Epoch:		3
 # same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DateTime/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a7c3c4a68286096e8f158e351c76ef3a
-URL:		http://search.cpan.org/dist/DateTime-TimeZone/
+# Source0-md5:	38fcf5adc3a2c989f5af95a74ecc29d1
+URL:		https://metacpan.org/dist/DateTime-TimeZone
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
 BuildRequires:	perl(Pod::Man) >= 1.14
 BuildRequires:	perl-devel >= 1:5.8.4

@@ -13,7 +13,7 @@ Epoch:		3
 # same as perl 5
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/DateTime/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/DateTime/DROLSKY/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6594692f63df025c64c12241d3d38901
 URL:		https://metacpan.org/dist/DateTime-TimeZone
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.31
@@ -81,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes
+%doc Changes SECURITY.md SUPPORT.md
 %{perl_vendorlib}/DateTime/TimeZone.pm
 %{perl_vendorlib}/DateTime/TimeZone
 %{_mandir}/man3/DateTime::TimeZone*.3pm*
